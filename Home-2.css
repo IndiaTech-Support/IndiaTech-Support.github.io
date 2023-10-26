@@ -11,7 +11,14 @@
   height: 143px;
   margin: 107px auto 0 432px;
 }
+body {
+  overflow: hidden;
+}
 
+/* Disable image highlights */
+img {
+  user-select: none;
+}
 .u-section-1 .u-btn-1 {
   letter-spacing: 1px;
   font-weight: 700;
