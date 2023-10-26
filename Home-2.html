@@ -20,21 +20,23 @@
   <script>
     // JavaScript to reset the countdown timer on page refresh
     document.addEventListener('DOMContentLoaded', function () {
-      // Set the target date to 7 days and 12 hours from the current time
+      // Set the target date to 7 days, 12 hours, 3 minutes, and 32 seconds from the current time
       var now = new Date();
       var targetDate = new Date(now);
-      targetDate.setDate(targetDate.getDate() = 7);
-      targetDate.setHours(targetDate.getHours() = 12);
-	        targetDate.setHours(targetDate.getSeconds() = 32);
-
+      targetDate.setDate(targetDate.getDate() + 7);
+      targetDate.setHours(targetDate.getHours() + 12);
+      targetDate.setMinutes(targetDate.getMinutes() + 3);
+      targetDate.setSeconds(targetDate.getSeconds() + 32);
+  
       var countdownElement = document.querySelector('.u-countdown-1');
-
+  
       if (countdownElement) {
         countdownElement.dataset.targetDate = targetDate.toISOString();
         countdownElement.dataset.direction = "down";
       }
     });
   </script>
+  
     <meta name="theme-color" content="#478ac9">
     <meta property="og:title" content="Home 2">
     <meta property="og:type" content="website">
